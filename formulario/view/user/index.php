@@ -1,0 +1,165 @@
+<?php
+  session_start();
+
+  // Validamos que exista una session y ademas que el cargo que exista sea igual a 1 (Administrador)
+  if(!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 2){
+    header('location: ../../index.php');
+  }
+
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo del Arte</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #dcf5e4;;
+        }
+        .navbar {
+            background-color: #8cd2ac; 
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important; 
+        }
+        .header, .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .header {
+            background-color: #8cd2a1 ;
+            color: #fff;
+        }
+        .section {
+            padding: 40px 20px;
+        }
+        .section-heading {
+            margin-bottom: 20px;
+        }
+        .footer {
+            background-color: #8cd29b;
+            padding: 10px;
+            text-align: center;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Arte</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#Inicio">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="galeria.html">Galería</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="artistas.html">Artistas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="eventos.html">Eventos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Inicio Sesion</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="header">
+        <h1>Bienvenidos al Mundo del Arte</h1>
+        <p>Descubre y explora la belleza del arte</p>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="section bg-light" id="Inicio">
+        <div class="container">
+            <div class="section-heading">
+                <h2 class="text-center">¿Que es el Arte?</h2>
+                <br>
+                <p>El arte es una forma de expresión humana que refleja ideas, emociones, o habilidades estéticas a través de diversos medios como la pintura, la escultura, la música, la literatura, la danza, entre otros. Es una manifestación cultural que busca transmitir significados y sensaciones, a menudo con el propósito de provocar una respuesta emocional o intelectual en quien lo contempla o experimenta. El arte puede ser interpretado de múltiples maneras y su valor puede variar según el contexto histórico, social y cultural en el que se presenta.</p>
+            </div>
+            <br>
+            <br>
+            <div class="container">
+                  <div class="row">
+                      <div class="col-md-4">
+                          <div class="card mb-4 shadow-sm">
+                            <img src="img/arte10.jpg">
+                              <div class="card-body">
+                                  <h5 class="card-title">Historia del Arte</h5>
+                                  <p class="card-text">La historia del arte es vasta y compleja, abarcando miles de años y múltiples culturas en todo el mundo. La historia del arte abarca desde las pinturas rupestres prehistóricas hasta las obras maestras contemporáneas. A lo largo de los siglos, el arte ha reflejado y respondido a las culturas y sociedades de su tiempo.</p>
+                              <div class="d-flex justify-content-between align-items-center">
+                                <button class="btn btn-sm btn-dark">Ver mas</button>
+                            </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-4">
+                          <div class="card mb-4 shadow-sm">
+                            <img src="img/arte11.jpg">
+                              <div class="card-body">
+                                  <h5 class="card-title">Movimientos Artísticos</h5>
+                                  <p class="card-text">Desde el Renacimiento hasta el Impresionismo, pasando por el Modernismo y el Arte Abstracto, cada movimiento artístico ha contribuido de manera única al desarrollo del arte tal como lo conocemos hoy.</p>
+                              <div class="d-flex justify-content-between align-items-center">
+                                <button class="btn btn-sm btn-dark">Ver mas</button>
+                            </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-4">
+                          <div class="card mb-4 shadow-sm">
+                            <img src="img/arte12.jpg">
+                              <div class="card-body">
+                                  <h5 class="card-title">Arte Contemporáneo</h5>
+                                  <p class="card-text">El arte contemporáneo abarca una variedad de medios y técnicas, explorando nuevas formas de expresión y desafiando las nociones tradicionales de lo que el arte puede ser.</p>
+                    
+                              <div class="d-flex justify-content-between align-items-center">
+                                <button class="btn btn-sm btn-dark">Ver mas</button>
+                            </div>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <br>
+        <h3 class="text-dark text-center">Siguenos</h3>
+      <br>
+        <section class="mb-4">
+          <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
+            <i class="bi bi-google"></i>
+          </a>
+          <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
+            <i class="bi bi-instagram"></i>
+          </a>
+        </section>
+        <p>&copy; 2024 Mundo del Arte. Todos los derechos reservados.</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@po"></script>
+
+</body>
+</html>
